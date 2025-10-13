@@ -31,12 +31,24 @@
             margin-right: 12px;
             color: #3b82f6; /* Blue-500 */
         }
+        /* Styles for CSS-based fullscreen mode */
+        .fullscreen-mode {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 50;
+            max-width: none;
+            max-height: none;
+            border-radius: 0;
+        }
     </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
 
-    <div id="presentation-container" class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden">
-        <div id="slides-wrapper" class="relative">
+    <div id="presentation-container" class="w-full max-w-4xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col" style="height: 90vh;">
+        <div id="slides-wrapper" class="relative flex-grow">
 
             <!-- Slide 1: Title -->
             <section class="slide slide-active relative flex-col justify-center items-center text-center p-8 sm:p-12" data-slide="1">
@@ -51,10 +63,10 @@
             </section>
 
             <!-- Slide 2: Propósito General -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="2">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="2">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Propósito General</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Propósito general</h2>
                     <ul class="space-y-4 text-lg text-gray-700">
                         <li class="flex items-start">
                              <svg class="icon-bullet flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -69,7 +81,7 @@
             </section>
 
             <!-- Slide 3: ¿Por qué es necesaria? -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="3">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="3">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content">
                     <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">¿Por qué es necesaria esta capacitación?</h2>
@@ -95,10 +107,10 @@
             </section>
             
             <!-- Slide 4: Estructura General -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="4">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="4">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Estructura General</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Estructura general</h2>
                     <ol class="list-decimal list-inside space-y-3 text-lg text-gray-700">
                         <li><strong>Qué es (y qué no es) la IA generativa:</strong> Comprensión y ética.</li>
                         <li><strong>Del caos al criterio:</strong> Prompting y pensamiento crítico.</li>
@@ -110,7 +122,7 @@
             </section>
 
             <!-- Slide 5: Sesión 1 -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="5">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="5">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content">
                     <span class="text-sm font-semibold text-blue-600">SESIÓN 1</span>
@@ -130,11 +142,11 @@
             </section>
 
             <!-- Slide 6: Sesión 2 -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="6">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="6">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content w-full">
                     <span class="text-sm font-semibold text-blue-600">SESIÓN 2</span>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Del caos al criterio: Cómo pedir bien</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Del caos al criterio: cómo pedir bien</h2>
                     <p class="text-lg text-gray-500 mb-4"><strong>Enfoque:</strong> Prompting y pensamiento crítico.</p>
                     <div class="flex items-center gap-8 mt-6">
                         <ul class="list-disc list-inside space-y-2 text-gray-700 w-3/5">
@@ -152,7 +164,7 @@
             </section>
 
             <!-- Slide 7: Sesión 3 -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="7">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="7">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content w-full">
                     <span class="text-sm font-semibold text-blue-600">SESIÓN 3</span>
@@ -174,7 +186,7 @@
             </section>
 
             <!-- Slide 8: Sesión 4 -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="8">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="8">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content w-full">
                     <span class="text-sm font-semibold text-blue-600">SESIÓN 4</span>
@@ -196,24 +208,29 @@
             </section>
 
             <!-- Slide 9: Sesión 5 -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="9">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="9">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
-                <div class="slide-content">
+                <div class="slide-content w-full">
                     <span class="text-sm font-semibold text-blue-600">SESIÓN 5</span>
-                    <h2 class="text-3xl font-bold text-gray-800 mb-2">De usuario a autor / Arquitectos de aprendizaje</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">De usuario a autor / arquitectos de aprendizaje</h2>
                     <p class="text-lg text-gray-500 mb-4"><strong>Enfoque:</strong> Creación de asistentes pedagógicos.</p>
-                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li>Qué es un asistente personalizado y cómo se construye.</li>
-                        <li>Ejemplos: para planificación, retroalimentación o evaluación.</li>
-                        <li>Ética en la automatización educativa (human-in-the-loop).</li>
-                        <li>Actividad final: creación de un asistente básico.</li>
-                        <li>Cierre reflexivo: "La IA no reemplaza al profesor, amplifica su voz."</li>
-                    </ul>
+                    <div class="flex items-center gap-8 mt-6">
+                         <ul class="list-disc list-inside space-y-2 text-gray-700 w-3/5">
+                            <li>Qué es un asistente personalizado y cómo se construye.</li>
+                            <li>Ejemplos: para planificación, retroalimentación o evaluación.</li>
+                            <li>Ética en la automatización educativa (human-in-the-loop).</li>
+                            <li>Actividad final: creación de un asistente básico.</li>
+                            <li>Cierre reflexivo: "La IA no reemplaza al profesor, amplifica su voz."</li>
+                        </ul>
+                        <div class="w-2/5">
+                           <img src="https://files.catbox.moe/3iaq9e.png" alt="Imagen ilustrativa de arquitectos de aprendizaje" class="rounded-lg shadow-md w-full h-auto">
+                        </div>
+                    </div>
                 </div>
             </section>
             
              <!-- Slide 10: Metodología -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="10">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="10">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content">
                     <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Metodología</h2>
@@ -239,10 +256,10 @@
             </section>
 
             <!-- Slide 11: Resultados Esperados -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="11">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="11">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Resultados Esperados</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Resultados esperados</h2>
                     <ul class="space-y-4 text-lg text-gray-700">
                         <li class="flex items-start">
                            <svg class="icon-bullet flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5z" /></svg>
@@ -265,10 +282,10 @@
             </section>
 
              <!-- Slide 12: Impacto Institucional -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="12">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="12">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Impacto Institucional</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Impacto institucional</h2>
                     <ul class="space-y-4 text-lg text-gray-700">
                         <li class="flex items-start">
                              <svg class="icon-bullet flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -291,10 +308,10 @@
             </section>
 
              <!-- Slide 13: Requerimientos Mínimos -->
-            <section class="slide relative flex-col justify-center p-8 sm:p-12" data-slide="13">
+            <section class="slide relative flex-col justify-center p-8 sm:px-12 sm:pt-24 sm:pb-12" data-slide="13">
                 <img src="https://files.catbox.moe/3lh38f.jpg" alt="Logo" class="absolute top-8 left-8 w-20 h-auto">
                 <div class="slide-content">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Requerimientos Mínimos</h2>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-4 border-blue-500 pb-2">Requerimientos mínimos</h2>
                      <ul class="space-y-4 text-lg text-gray-700">
                         <li class="flex items-start">
                             <svg class="icon-bullet flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h13.5A2.25 2.25 0 0121 5.25z" /></svg>
@@ -319,11 +336,9 @@
                      <svg class="mx-auto h-12 w-12 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
                     </svg>
-                    <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mt-4 mb-2">Cierre Inspirador</h2>
-                    <blockquote class="text-xl sm:text-2xl italic text-gray-600">
+                    <blockquote class="text-xl sm:text-2xl italic text-gray-600 mt-4">
                         "La IA no reemplaza al profesor: amplifica su voz, su criterio y su creatividad."
                     </blockquote>
-                    <p class="mt-6 text-gray-500">- Propuesta diseñada por Manuel Puebla Vega</p>
                 </div>
             </section>
 
@@ -332,7 +347,17 @@
 
         <!-- Navigation -->
         <div class="flex justify-between items-center p-4 bg-gray-50 border-t border-gray-200">
-            <span id="slide-counter" class="text-sm font-medium text-gray-600"></span>
+            <div class="flex items-center gap-4">
+                <button id="fullscreen-btn" title="Pantalla completa" class="p-2 rounded-lg hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    <svg id="enter-fullscreen-icon" class="w-5 h-5 text-gray-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5v-4m0 0h-4m4 0l-5-5" />
+                    </svg>
+                    <svg id="exit-fullscreen-icon" class="w-5 h-5 text-gray-700 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 14h6v6m0-6l-7 7m17-11h-6V3m0 6l7-7" />
+                    </svg>
+                </button>
+                <span id="slide-counter" class="text-sm font-medium text-gray-600"></span>
+            </div>
             <div class="flex space-x-2">
                 <button id="prev-btn" class="px-4 py-2 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
                     Anterior
@@ -350,6 +375,10 @@
             const prevBtn = document.getElementById('prev-btn');
             const nextBtn = document.getElementById('next-btn');
             const slideCounter = document.getElementById('slide-counter');
+            const presentationContainer = document.getElementById('presentation-container');
+            const fullscreenBtn = document.getElementById('fullscreen-btn');
+            const enterIcon = document.getElementById('enter-fullscreen-icon');
+            const exitIcon = document.getElementById('exit-fullscreen-icon');
             
             let currentSlide = 0;
             const totalSlides = slides.length;
@@ -362,13 +391,19 @@
             }
 
             function updateNavigation() {
-                // Update counter
                 slideCounter.textContent = `Diapositiva ${currentSlide + 1} de ${totalSlides}`;
-                
-                // Update button states
                 prevBtn.disabled = currentSlide === 0;
                 nextBtn.disabled = currentSlide === totalSlides - 1;
             }
+
+            function toggleFullScreen() {
+                presentationContainer.classList.toggle('fullscreen-mode');
+                const isFullscreen = presentationContainer.classList.contains('fullscreen-mode');
+                enterIcon.classList.toggle('hidden', isFullscreen);
+                exitIcon.classList.toggle('hidden', !isFullscreen);
+            }
+            
+            fullscreenBtn.addEventListener('click', toggleFullScreen);
 
             nextBtn.addEventListener('click', () => {
                 if (currentSlide < totalSlides - 1) {
@@ -390,9 +425,4 @@
     </script>
 </body>
 </html>
-
-
-
-
-
 
