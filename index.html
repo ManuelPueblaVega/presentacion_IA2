@@ -36,12 +36,13 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             z-index: 50;
             max-width: none;
             max-height: none;
             border-radius: 0;
+            padding: 1rem; /* Add some padding for better viewing */
         }
     </style>
 </head>
@@ -401,6 +402,12 @@
                 const isFullscreen = presentationContainer.classList.contains('fullscreen-mode');
                 enterIcon.classList.toggle('hidden', isFullscreen);
                 exitIcon.classList.toggle('hidden', !isFullscreen);
+                if (isFullscreen) {
+                    presentationContainer.style.height = '100%';
+                } else {
+                    presentationContainer.style.height = '90vh';
+                }
+                document.body.style.overflow = isFullscreen ? 'hidden' : 'auto';
             }
             
             fullscreenBtn.addEventListener('click', toggleFullScreen);
